@@ -19,14 +19,6 @@ const PackingListStyled = styled.div`
     gap: 1.2rem;
     justify-content: center;
     align-content: start;
-
-    & li {
-      font-size: 1.5rem;
-
-      & button {
-        font-size: 1.1rem;
-      }
-    }
   }
 `;
 
