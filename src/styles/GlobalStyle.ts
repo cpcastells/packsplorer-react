@@ -10,6 +10,7 @@ export const GlobalStyle = createGlobalStyle`
 
   body {
     font-family: "Quicksand";
+    font-size: 2.4rem;
     margin: 0;
   }
 
@@ -38,6 +39,7 @@ export const GlobalStyle = createGlobalStyle`
     border: none;
     cursor: pointer;
     font-family: inherit;
+    background: none;
   }
 
   input {

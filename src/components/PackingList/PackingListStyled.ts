@@ -1,0 +1,33 @@
+import styled from "styled-components";
+
+const PackingListStyled = styled.div`
+  background-color: #5a3e2b;
+  color: #ffebb3;
+  padding: 4rem 0;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 3.2rem;
+  align-items: center;
+
+  .items-list {
+    list-style: none;
+    width: 80%;
+    font-size: 2.4rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.2rem;
+    justify-content: center;
+    align-content: start;
+
+    & li {
+      font-size: 1.5rem;
+
+      & button {
+        font-size: 1.1rem;
+      }
+    }
+  }
+`;
+
+export default PackingListStyled;
