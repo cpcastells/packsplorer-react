@@ -1,7 +1,13 @@
 import Header from "../Header/Header";
+import PackingList from "../PackingList/PackingList";
 
 function App() {
-  return <Header />;
+  return (
+    <>
+      <Header />
+      <PackingList />
+    </>
+  );
 }
 
 export default App;
