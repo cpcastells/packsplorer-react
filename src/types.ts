@@ -1,5 +1,5 @@
 export interface item {
-  id: number;
+  id: string;
   quantity: number;
   description: string;
   packed: boolean;
