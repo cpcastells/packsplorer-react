@@ -5,7 +5,6 @@ const PackingListStyled = styled.div`
   color: #ffebb3;
   padding: 4rem 0;
   display: flex;
-  justify-content: space-between;
   flex-direction: column;
   gap: 3.2rem;
   align-items: center;
@@ -19,6 +18,7 @@ const PackingListStyled = styled.div`
     gap: 1.2rem;
     justify-content: center;
     align-content: start;
+    justify-items: center;
   }
 `;
 

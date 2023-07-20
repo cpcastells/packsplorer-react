@@ -1,3 +1,4 @@
+import Footer from "../Footer/Footer";
 import Form from "../Form/Form";
 import Header from "../Header/Header";
 import PackingList from "../PackingList/PackingList";
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <Form />
       <PackingList />
+      <Footer />
     </AppStyled>
   );
 }
