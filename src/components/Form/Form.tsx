@@ -9,16 +9,22 @@ interface FormProps {
 }
 
 const Form = ({ onAddItem }: FormProps): React.ReactElement => {
-  const [item, setItem] = useState({
+  const initialState: item = {
     description: "",
     quantity: 1,
     packed: false,
     id: "",
-  });
+  };
+
+  const [item, setItem] = useState(initialState);
 
   const handleOnSubmit = (event: React.ChangeEvent<HTMLFormElement>) => {
     event.preventDefault();
+
+    if (!item.description) return;
+
     onAddItem({ ...item, id: uuid() });
+    setItem(initialState);
   };
 
   const handleOnChange = (
