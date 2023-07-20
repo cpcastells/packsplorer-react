@@ -1,14 +1,20 @@
 import React from "react";
 import PackingListStyled from "./PackingListStyled";
 import Item from "../Item/Item";
-import { itemMock } from "../../mocks/mocks";
+import { item } from "../../types";
 
-const PackingList = (): React.ReactElement => {
+interface PackingListProps {
+  items: item[];
+}
+
+const PackingList = ({ items }: PackingListProps): React.ReactElement => {
   return (
     <PackingListStyled>
       <h3>What's in your bag?</h3>
       <ul className="items-list">
-        <Item item={itemMock} />
+        {items.map((item) => (
+          <Item item={item} key={item.id} />
+        ))}
       </ul>
     </PackingListStyled>
   );
