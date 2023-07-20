@@ -42,9 +42,10 @@ export const GlobalStyle = createGlobalStyle`
     background: none;
   }
 
-  input {
+  input, select {
     border: none;
-    font: inherit;
+    font-family: inherit;
+    cursor: pointer;
   }
 
 `;
