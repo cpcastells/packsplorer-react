@@ -8,6 +8,10 @@ export const GlobalStyle = createGlobalStyle`
     
   }
 
+  html {
+    font-size: 62.5%;
+  }
+
   body {
     font-family: "Quicksand";
     font-size: 2.4rem;

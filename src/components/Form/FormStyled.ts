@@ -7,7 +7,7 @@ const FormStyled = styled.form`
   align-items: center;
   justify-content: center;
   gap: 0.8rem;
-  font-size: 1.5rem;
+  font-size: 2.4rem;
   font-weight: bold;
 
   & button,
@@ -16,9 +16,9 @@ const FormStyled = styled.form`
     background-color: #ffebb3;
     color: #5a3e2b;
     border-radius: 10rem;
-    padding: 0.6rem 2.2rem;
+    padding: 1.2rem 3.2rem;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
   }
 
   .add-item {
