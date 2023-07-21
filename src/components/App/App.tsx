@@ -9,15 +9,23 @@ import AppStyled from "./AppStyled";
 function App() {
   const [items, setItems] = useState<item[]>([]);
 
-  const handleAddItem = (item: item) => {
+  const handleAddItem = (item: item): void => {
     setItems((items) => [...items, item]);
+  };
+
+  const handleOnToggle = (id: string): void => {
+    setItems((items) =>
+      items.map((item) =>
+        item.id === id ? { ...item, packed: !item.packed } : item,
+      ),
+    );
   };
 
   return (
     <AppStyled>
       <Header />
       <Form onAddItem={handleAddItem} />
-      <PackingList items={items} />
+      <PackingList items={items} onToggleItem={handleOnToggle} />
       <Footer items={items} />
     </AppStyled>
   );
