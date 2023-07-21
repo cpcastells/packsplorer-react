@@ -5,9 +5,14 @@ import { item } from "../../types";
 interface ItemProps {
   item: item;
   onToggleItem: (id: string) => void;
+  onDeleteItem: (id: string) => void;
 }
 
-const Item = ({ item, onToggleItem }: ItemProps): React.ReactElement => {
+const Item = ({
+  item,
+  onToggleItem,
+  onDeleteItem,
+}: ItemProps): React.ReactElement => {
   return (
     <ItemStyled>
       <input
@@ -18,7 +23,7 @@ const Item = ({ item, onToggleItem }: ItemProps): React.ReactElement => {
       <span className={item.packed ? "packed" : ""}>
         {item.quantity} {item.description}
       </span>
-      <button>❌</button>
+      <button onClick={() => onDeleteItem(item.id)}>❌</button>
     </ItemStyled>
   );
 };
