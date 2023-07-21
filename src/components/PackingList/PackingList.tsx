@@ -15,9 +15,9 @@ const PackingList = ({
   onDeleteItem,
 }: PackingListProps): React.ReactElement => {
   return (
-    <PackingListStyled>
+    <PackingListStyled className="packing-list">
       <h3>What's in your bag?</h3>
-      <ul className="items-list">
+      <ul className="packing-list__items">
         {items.map((item) => (
           <Item
             item={item}
