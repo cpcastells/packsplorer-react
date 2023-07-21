@@ -18,7 +18,7 @@ function App() {
       <Header />
       <Form onAddItem={handleAddItem} />
       <PackingList items={items} />
-      <Footer />
+      <Footer items={items} />
     </AppStyled>
   );
 }
