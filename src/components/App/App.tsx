@@ -27,8 +27,12 @@ function App() {
     );
   };
 
-  const handleOnSort = (sortBy: string) => {
+  const handleOnSort = (sortBy: string): void => {
     setSortBy(sortBy);
+  };
+
+  const handleOnClear = (): void => {
+    setItems([]);
   };
 
   return (
@@ -41,7 +45,12 @@ function App() {
         onDeleteItem={handleDeleteItem}
         sortBy={sortBy}
       />
-      <Sort onSort={handleOnSort} sortBy={sortBy} />
+      <Sort
+        onSort={handleOnSort}
+        onClear={handleOnClear}
+        sortBy={sortBy}
+        items={items}
+      />
       <Footer items={items} />
     </AppStyled>
   );

@@ -1,12 +1,20 @@
 import React from "react";
 import SortStyled from "./SortStyled";
+import { item } from "../../types";
 
 interface SortProps {
   onSort: (type: string) => void;
+  onClear: () => void;
   sortBy: string;
+  items: item[];
 }
 
-const Sort = ({ onSort, sortBy }: SortProps): React.ReactElement => {
+const Sort = ({
+  onSort,
+  onClear,
+  sortBy,
+  items,
+}: SortProps): React.ReactElement => {
   return (
     <SortStyled>
       <div className="packing-list__sort">
@@ -15,6 +23,11 @@ const Sort = ({ onSort, sortBy }: SortProps): React.ReactElement => {
           <option value="description">Sort by description</option>
           <option value="packed">Sort by packed status</option>
         </select>
+        {items.length ? (
+          <button onClick={() => onClear()}>clear list</button>
+        ) : (
+          ""
+        )}
       </div>
     </SortStyled>
   );

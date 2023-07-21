@@ -6,7 +6,8 @@ const SortStyled = styled.div`
   padding: 4rem 0;
   justify-content: center;
 
-  select {
+  select,
+  button {
     text-transform: uppercase;
     padding: 0.8rem 2.4rem;
     font-size: 1.4rem;
