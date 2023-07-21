@@ -2,25 +2,25 @@ import { item } from "../types";
 
 export const itemMocks: item[] = [
   {
-    id: 1,
+    id: "as",
     description: "pullover",
-    packed: false,
+    packed: true,
     quantity: 2,
   },
   {
-    id: 2,
+    id: "asd",
     description: "sunglasses",
     packed: false,
     quantity: 1,
   },
   {
-    id: 3,
+    id: "asdf",
     description: "jeans",
     packed: false,
     quantity: 1,
   },
   {
-    id: 4,
+    id: "asdd",
     description: "batteries",
     packed: false,
     quantity: 2,
@@ -28,7 +28,7 @@ export const itemMocks: item[] = [
 ];
 
 export const itemMock: item = {
-  id: 1,
+  id: "adas",
   description: "pullover",
   packed: false,
   quantity: 2,

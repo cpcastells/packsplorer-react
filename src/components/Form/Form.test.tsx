@@ -6,7 +6,7 @@ describe("Given a Form component", () => {
     test("Then it should show a button with the text 'add'", () => {
       const expectedText = "add";
 
-      render(<Form />);
+      render(<Form onAddItem={() => ({})} />);
 
       const button = screen.getByRole("button", { name: expectedText });
 
