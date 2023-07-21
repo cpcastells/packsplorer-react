@@ -35,22 +35,24 @@ const Form = ({ onAddItem }: FormProps): React.ReactElement => {
 
   return (
     <FormStyled onSubmit={handleOnSubmit}>
-      <h2>What do you need for your 🤩 trip?</h2>
-      <select id="quantity" value={item.quantity} onChange={handleOnChange}>
-        {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
-          <option value={num} key={num}>
-            {num}
-          </option>
-        ))}
-      </select>
-      <input
-        type="text"
-        id="description"
-        value={item.description}
-        placeholder="item..."
-        onChange={handleOnChange}
-      />
-      <button className="add-item">add</button>
+      <h2 className="form-title">What do you need for your 🤩 trip?</h2>
+      <div className="form-data">
+        <select id="quantity" value={item.quantity} onChange={handleOnChange}>
+          {Array.from({ length: 20 }, (_, i) => i + 1).map((num) => (
+            <option value={num} key={num}>
+              {num}
+            </option>
+          ))}
+        </select>
+        <input
+          type="text"
+          id="description"
+          value={item.description}
+          placeholder="item..."
+          onChange={handleOnChange}
+        />
+      </div>
+      <button className="form-add">add</button>
     </FormStyled>
   );
 };
