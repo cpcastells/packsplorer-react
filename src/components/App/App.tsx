@@ -5,9 +5,11 @@ import Form from "../Form/Form";
 import Header from "../Header/Header";
 import PackingList from "../PackingList/PackingList";
 import AppStyled from "./AppStyled";
+import Sort from "../Sort/Sort";
 
 function App() {
   const [items, setItems] = useState<item[]>([]);
+  const [sortBy, setSortBy] = useState<string>("input");
 
   const handleAddItem = (item: item): void => {
     setItems((items) => [...items, item]);
@@ -25,6 +27,10 @@ function App() {
     );
   };
 
+  const handleOnSort = (sortBy: string) => {
+    setSortBy(sortBy);
+  };
+
   return (
     <AppStyled>
       <Header />
@@ -33,7 +39,9 @@ function App() {
         items={items}
         onToggleItem={handleOnToggle}
         onDeleteItem={handleDeleteItem}
+        sortBy={sortBy}
       />
+      <Sort onSort={handleOnSort} sortBy={sortBy} />
       <Footer items={items} />
     </AppStyled>
   );

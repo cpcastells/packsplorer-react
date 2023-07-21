@@ -9,16 +9,18 @@ const PackingListStyled = styled.div`
   gap: 3.2rem;
   align-items: center;
 
-  .items-list {
-    list-style: none;
-    width: 80%;
-    font-size: 2.4rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.2rem;
-    justify-content: center;
-    align-content: start;
-    justify-items: start;
+  .packing-list {
+    &__items {
+      list-style: none;
+      width: 80%;
+      font-size: 2.4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.2rem;
+      justify-content: center;
+      align-content: start;
+      justify-items: start;
+    }
   }
 `;
 

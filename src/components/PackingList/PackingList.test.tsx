@@ -15,6 +15,7 @@ describe("Given a PackingList component", () => {
           items={itemMocks}
           onToggleItem={toggleItem}
           onDeleteItem={deleteItem}
+          sortBy="input"
         />,
       );
 
