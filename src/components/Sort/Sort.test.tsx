@@ -46,4 +46,28 @@ describe("Given a Sort component", () => {
       expect(onClear).toHaveBeenCalled();
     });
   });
+
+  describe("When it receives an empty items list", () => {
+    test("Then 'clear list' button should not be present", () => {
+      render(
+        <Sort onSort={onSort} onClear={onClear} items={[]} sortBy="input" />,
+      );
+
+      const button = screen.queryByRole("button", { name: "clear list" });
+
+      expect(button).not.toBeInTheDocument();
+    });
+  });
+
+  describe("When it receives a list with one or more items", () => {
+    test("Then 'clear list' button should be present", () => {
+      render(
+        <Sort onSort={onSort} onClear={onClear} items={[]} sortBy="input" />,
+      );
+
+      const button = screen.queryByRole("button", { name: "clear list" });
+
+      expect(button).not.toBeInTheDocument();
+    });
+  });
 });
