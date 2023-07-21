@@ -8,8 +8,15 @@ describe("Given a Item component", () => {
     test("Then it should show a button with the text '❌'", () => {
       const expectedText = "❌";
       const toggleItem = vi.fn();
+      const deleteItem = vi.fn();
 
-      render(<Item item={itemMock} onToggleItem={() => toggleItem} />);
+      render(
+        <Item
+          item={itemMock}
+          onToggleItem={() => toggleItem}
+          onDeleteItem={() => deleteItem}
+        />,
+      );
 
       const button = screen.getByRole("button", { name: expectedText });
 
