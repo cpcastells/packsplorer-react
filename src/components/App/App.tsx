@@ -13,6 +13,10 @@ function App() {
     setItems((items) => [...items, item]);
   };
 
+  const handleDeleteItem = (id: string): void => {
+    setItems((items) => items.filter((item) => item.id !== id));
+  };
+
   const handleOnToggle = (id: string): void => {
     setItems((items) =>
       items.map((item) =>
@@ -25,7 +29,11 @@ function App() {
     <AppStyled>
       <Header />
       <Form onAddItem={handleAddItem} />
-      <PackingList items={items} onToggleItem={handleOnToggle} />
+      <PackingList
+        items={items}
+        onToggleItem={handleOnToggle}
+        onDeleteItem={handleDeleteItem}
+      />
       <Footer items={items} />
     </AppStyled>
   );
