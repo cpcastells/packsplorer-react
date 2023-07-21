@@ -39,6 +39,7 @@ function App() {
         items={items}
         onToggleItem={handleOnToggle}
         onDeleteItem={handleDeleteItem}
+        sortBy={sortBy}
       />
       <Sort onSort={handleOnSort} sortBy={sortBy} />
       <Footer items={items} />
