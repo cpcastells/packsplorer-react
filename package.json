@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@fontsource/darumadrop-one": "^5.0.5",
+    "@fontsource/lobster": "^5.0.5",
     "@fontsource/quicksand": "^5.0.5",
     "@types/uuid": "^9.0.2",
     "react": "^18.2.0",

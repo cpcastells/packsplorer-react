@@ -5,7 +5,7 @@ const HeaderStyled = styled.header`
 
   .main-title {
     text-align: center;
-    font-family: "Darumadrop One";
+    font-family: "Lobster";
     font-size: 7rem;
     letter-spacing: -5px;
     padding: 2.4rem 0;
