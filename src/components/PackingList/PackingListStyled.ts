@@ -18,7 +18,7 @@ const PackingListStyled = styled.div`
     gap: 1.2rem;
     justify-content: center;
     align-content: start;
-    justify-items: center;
+    justify-items: start;
   }
 `;
 
